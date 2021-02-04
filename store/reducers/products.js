@@ -1,4 +1,3 @@
-import PRODUCTS from '../../data/dummy-data';
 import {
   DELETE_PRODUCT,
   CREATE_PRODUCT,
@@ -31,7 +30,7 @@ export default (state = initialState, action) => {
       );
       return {
         ...state,
-        availableProducts: state.availableProducts.concat(newProduct),
+        availableProducts: state.availableProducts.concat(newProduct), //concat return new array
         userProducts: state.userProducts.concat(newProduct)
       };
     case UPDATE_PRODUCT:
